@@ -128,3 +128,33 @@ Observe app changes in both local and AKS clusters:
 kubectl get pod -n azure-arc
 kubectl logs config-agent-xxxxxxx-xxxxx config-agent -n azure-arc -f | grep "^{" | jq .
 ```
+
+Cleanup
+-------
+
+Microk8s:
+
+```bat
+.\az_k8sconfig_helm_cleanup_microk8s.bat
+```
+
+Delete the Microk8s cluster:
+
+```bat
+microk8s stop
+microk8s uninstall
+```
+
+AKS:
+
+```sh
+./az_k8sconfig_helm_cleanup_AKS.sh
+```
+
+Delete the AKS cluster:
+
+```sh
+az aks delete -g arc-demos -n aks1
+az group delete -n arc-demos
+kubectl config unset aks1
+```
