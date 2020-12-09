@@ -83,6 +83,8 @@ We'll deploy a NGINX ingress controller and a sample web app using GitOps.
 
 MicroK8s (on Windows, adjust for Linux):
 
+Update git repo in `az_k8sconfig_helm_microk8s.bat` if you plan to fork the `hello_arc` repo.
+
 ```cmd
 .\az_k8sconfig_helm_microk8s.bat
 
@@ -95,6 +97,8 @@ kubectl get all -n cluster-mgmt
 Browse to http://localhost:8081
 
 AKS:
+
+Update git repo in `az_k8sconfig_helm_AKS.sh` if you plan to fork the `hello_arc` repo.
 
 ```sh
 ./az_k8sconfig_helm_AKS.sh
