@@ -1,7 +1,7 @@
 Arc for Kubernetes Demo
 =======================
 
-A simple demo to demo Arc enabled clusters:
+A simple demo to show Arc enabled clusters with:
 
 1. AKS
 2. MicroK8s on your laptop
